@@ -1,4 +1,4 @@
-function T = getTransf(th1,th2,th3,th4,th5,th6,th7)
+function T = getTransform2(th1,th2,th3,th4,th5,th6,th7)
 
 global l1 l2 l3 l4
 
