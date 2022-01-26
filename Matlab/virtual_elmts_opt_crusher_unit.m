@@ -244,7 +244,7 @@ while 1
         t_score1_rec(i_score1) = toc;
         i_score1 = i_score1 + 1;
         
-        T_ee_init = getTransf(th0(1),th0(2),th0(3),th0(4),th0(5),th0(6),th0(7));
+        T_ee_init = getTransform2(th0(1),th0(2),th0(3),th0(4),th0(5),th0(6),th0(7));
         x_des = T_ee_init(1,4);
         y_des = T_ee_init(2,4);
         z_des = T_ee_init(3,4);
@@ -257,7 +257,7 @@ while 1
         y_init = T_ee_init(2,4);
         z_init = T_ee_init(3,4);
         
-        T_ee_t = getTransf(th0_prev(1),th0_prev(2),th0_prev(3),th0_prev(4),th0_prev(5),th0_prev(6),th0_prev(7));
+        T_ee_t = getTransform2(th0_prev(1),th0_prev(2),th0_prev(3),th0_prev(4),th0_prev(5),th0_prev(6),th0_prev(7));
         
         errorX = T_ee_t(1,4) - x_des;
         errorY = T_ee_t(2,4) - y_des;
