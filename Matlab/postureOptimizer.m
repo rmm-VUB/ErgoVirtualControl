@@ -1,4 +1,4 @@
-function [t,y] = solveODE(th0,offset)
+function [t,y] = postureOptimizer(th0,offset)
 %#codegen
 delta_t = [0 10];
 t = 0:1;
