@@ -363,7 +363,7 @@ void go_to_ergo_opt_cart_position(franka::Robot &robot, double delta[])
   });
 }
 
-void workpiece_ergo_control(franka::Robot &robot)
+void end_effector_control(franka::Robot &robot)
 {
   sleep(1.0);
   double *delta = receive_x_y_z_UDP();
@@ -480,7 +480,7 @@ int main(int argc, char** argv) {
 
       if(step == 2 || step == 9)
       {
-        workpiece_ergo_control(robot);
+        end_effector_control(robot);
         sleep(1.0);
         wait_user_force_on_robot(robot);
         gripper.move(width_gripper_rod_open, 0.05);
