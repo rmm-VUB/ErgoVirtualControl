@@ -279,7 +279,7 @@ while 1
         Z_on = 1;
         
         if error >= precision %|| (X_on == 0 && Y_on == 0 && Z_on == 0)
-            [t,y] = solveODE_mex([0,0,0,0,0,0,0],offset');
+            [t,y] = postureOptimizer_mex([0,0,0,0,0,0,0],offset');
             score2 = REBA([y(end,1),y(end,2),y(end,3),y(end,4),y(end,5),y(end,6),y(end,7)])';
             
             score2_rec(:, i_score2) = score2;
