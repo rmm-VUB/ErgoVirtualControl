@@ -312,7 +312,7 @@ while 1
                 
                 %human_model(th0(1),th0(2),th0(3),th0(4),th0(5),th0(6),th0(7));
                 
-                [t,yRobot] = solveODE_mex([0,0,0,0,0,0,0],offset');
+                [t,yRobot] = postureOptimizer_mex([0,0,0,0,0,0,0],offset');
                 score3 = REBA([yRobot(end,1),yRobot(end,2),yRobot(end,3),yRobot(end,4),yRobot(end,5),y(end,6),yRobot(end,7)])';
                 
                 score3_rec(:, i_score3) = score3;
