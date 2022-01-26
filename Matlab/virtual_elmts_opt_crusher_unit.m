@@ -299,7 +299,7 @@ while 1
             
             th0_prev = [y(end,1),y(end,2),y(end,3),y(end,4),y(end,5),y(end,6),y(end,7)];
             
-            T_ee = getTransf(y(end,1),y(end,2),y(end,3),y(end,4),y(end,5),y(end,6),y(end,7));
+            T_ee = getTransform2(y(end,1),y(end,2),y(end,3),y(end,4),y(end,5),y(end,6),y(end,7));
             
             Tee_rec(:, :, i_Tee) = T_ee;
             t_Tee_rec(i_Tee) = toc;
@@ -319,7 +319,7 @@ while 1
                 t_score3_rec(i_score3) = toc;
                 i_score3 = i_score3 + 1;
                 
-                T_ee_robot = getTransf(yRobot(end,1),yRobot(end,2),yRobot(end,3),yRobot(end,4),yRobot(end,5),yRobot(end,6),yRobot(end,7));
+                T_ee_robot = getTransform2(yRobot(end,1),yRobot(end,2),yRobot(end,3),yRobot(end,4),yRobot(end,5),yRobot(end,6),yRobot(end,7));
                 
                 dataSentRobot = [typecast(T_ee_robot(1,4)-x_init,'uint8'), typecast(T_ee_robot(2,4)-y_init,'uint8'), typecast(T_ee_robot(3,4)-z_init,'uint8')];
                 udpsRobot2(dataSentRobot);
